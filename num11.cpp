@@ -5,13 +5,13 @@ using namespace std;
 string itc_cmp_str(string str1, string str2, int num) {
     int a = itc_len(str1);
     int b = itc_len(str2);
-    int c = a+b;
     if (num < 0) {
         num = 0;
     }
     if (num >= a) {
         return str1;
     }
+    int c = a+b;
     string result(c, ' ');
     for (int i = 0; i < num; i++) {
         result[i] = str1[i];
