@@ -4,31 +4,31 @@
 using namespace std;
 string itc_three_str(string str1,string str2, string str3) {
     string result = "";
-    int len1 = 0;
-    int len2 = 0;
-    int len3 = 0;
-    while (str1[len1] != '\0') {
-        len1++;
+    int a = 0;
+    int b = 0;
+    int c = 0;
+    while (str1[a] != '\0') {
+        a++;
     }
-    while (str2[len2] != '\0') {
-        len2++;
+    while (str2[b]!='\0') {
+        b++;
     }
-    while (str3[len3] != '\0') {
-        len3++;
+    while (str3[c] != '\0') {
+        c++;
     }
     int i = 0;
-    while (str1[i] != '\0') {
-        bool a = true;
-        for (int j = 0; j < len2; j++) {
+    while (str1[i]!='\0') {
+        bool d = true;
+        for (int j = 0; j < b; j++) {
             if (str1[i+j] != str2[j]) {
-                a = false;
+                d = false;
             }
         }
-        if (a==true) {
-            for (int j = 0; j < len3; j++) {
+        if (d==true) {
+            for (int j=0; j < c; j++) {
                 result += str3[j];
             }
-            i += len2;
+            i += b;
         }
         else {
             result += str1[i];
